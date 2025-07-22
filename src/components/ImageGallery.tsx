@@ -134,14 +134,14 @@ export const ImageGallery: React.FC = () => {
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 z-10"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 z-20"
                   onError={() => handleImageError(image.id)}
                   onLoad={() => console.log("Gallery image loaded:", image.src)}
                 />
               )}
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-end z-20">
+              <div className="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-end z-40">
                 <div className="w-full p-4 text-white transform translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
                   <h3 className="font-semibold text-sm">{image.caption}</h3>
                 </div>
