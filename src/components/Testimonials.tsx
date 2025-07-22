@@ -19,7 +19,7 @@ const testimonials = [
     name: "Davi Santos",
     role: "Pai de aluno",
     content:
-      "Minha filha de 8 anos adora as aulas! Ela chegou em casa cantando músicas em inglês desde a primeira semana. O método é realmente eficaz para crianças.",
+      "Meu filho de 11 anos adora as aulas! Ele chegou em casa cantando músicas em inglês desde a primeira semana. O método é realmente eficaz para crianças.",
     rating: 5,
     image: "/images/testimonials/testimonial-2.jpg",
   },

@@ -17,7 +17,7 @@ export const FormSection: React.FC = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                Garante sua vaga
+                Garanta a sua vaga
                 <span className="block text-primary-600">Matrículas 2025</span>
               </h2>
 

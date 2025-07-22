@@ -22,11 +22,6 @@ export const Hero: React.FC = () => {
           <div className="space-y-8">
             {/* Logo/Brand */}
             <div className="space-y-4">
-              {/* <img
-                src="/images/cultura-inglesa-logo-lion-h-nb-whitename.png"
-                alt="Cultura Inglesa"
-                className="h-[72px] w-auto"
-              /> */}
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
                 Matrículas
                 <span className="block text-accent-600">2025</span>

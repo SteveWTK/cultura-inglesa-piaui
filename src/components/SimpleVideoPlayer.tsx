@@ -40,6 +40,8 @@ export const SimpleVideoPlayer: React.FC<SimpleVideoPlayerProps> = ({
       ? `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`
       : "");
 
+  // const thumbnailSrc = "https://picsum.photos/800/600";
+
   return (
     <>
       {/* Video Thumbnail */}
@@ -48,9 +50,9 @@ export const SimpleVideoPlayer: React.FC<SimpleVideoPlayerProps> = ({
         onClick={openVideo}
       >
         {/* Always show background gradient */}
-        <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center">
-          <div className="text-center text-white">
-            <h3 className="text-xl font-bold mb-2">{title}</h3>
+        <div className="absolute -inset-y-0 w-full h-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center">
+          <div className="text-center z-30">
+            <h3 className="text-xl text-primary-50 font-bold mb-2">{title}</h3>
             <p className="text-primary-100">Clique para assistir</p>
           </div>
         </div>
@@ -60,7 +62,7 @@ export const SimpleVideoPlayer: React.FC<SimpleVideoPlayerProps> = ({
           <img
             src={thumbnailSrc}
             alt={title}
-            className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 z-10"
+            className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 z-25"
             onError={() => {
               console.log("Video thumbnail failed to load:", thumbnailSrc);
               setImageError(true);
@@ -72,14 +74,14 @@ export const SimpleVideoPlayer: React.FC<SimpleVideoPlayerProps> = ({
         )}
 
         {/* Play Button Overlay - Always on top */}
-        <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center group-hover:bg-opacity-30 transition-all duration-300 z-20">
-          <div className="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300">
-            <Play className="h-8 w-8 text-white ml-1" fill="currentColor" />
-          </div>
+        {/* <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center group-hover:bg-opacity-30 transition-all duration-300 z-20"> */}
+        <div className="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300 z-50">
+          <Play className="h-8 w-8 text-white ml-1 z-45" fill="black" />
         </div>
+        {/* </div> */}
 
         {/* Duration Badge */}
-        <div className="absolute bottom-4 right-4 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm font-medium z-20">
+        <div className="absolute bottom-4 right-4 bg-black bg-opacity-70 text-white px-3 py-1 rounded-lg text-sm font-medium z-30">
           {type === "youtube" ? "YouTube" : "2:30"}
         </div>
       </div>
