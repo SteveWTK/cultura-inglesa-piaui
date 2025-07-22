@@ -91,7 +91,7 @@ export const Hero: React.FC = () => {
                 </div>
               </div> */}
               <img
-                src="/images/hero-students.jpg"
+                src="/images/gallery/hero-student-smiling-younger.jpeg"
                 alt="Estudantes da Cultura Inglesa"
                 className="rounded-2xl shadow-2xl w-full"
               />
